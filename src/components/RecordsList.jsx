@@ -20,6 +20,7 @@ function RecordsList() {
       return(
         <li key={i} >
           <h2><a href = {`/${List._id}`}>{List.artist}</a></h2>
+          <h3>{List.title}</h3>
         </li>
       )
     })}
