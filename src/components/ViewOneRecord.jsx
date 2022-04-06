@@ -20,12 +20,12 @@ function ViewOneRecord() {
 
   return (
 
-    <div>
-    Artist<h3>{record.artist}</h3>
-    Title:<h3>{record.title}</h3>
-    Year:<h3>{record.year}</h3>
-    Genre:<h3>{record.genre}</h3>
-    Album Cover:<img src={record.cover}/>
+    <div id={'onerecord'}>
+    Artist: {record.artist}<br/>
+    Title: {record.title}<br/>
+    Year: {record.year}<br/>
+    Genre: {record.genre}<br/>
+    Album Cover: <br/><img style={{height:'200px'}} src={record.cover}/>
 
 
     <br/>

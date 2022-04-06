@@ -1,3 +1,4 @@
+import './RecordsList.css'
 import React from 'react'
 import {useState, useEffect} from 'react'
 import {getRecords} from '../services/record-api'
@@ -12,22 +13,20 @@ function RecordsList() {
     },[])
 
   return (
-    <>
-    <div style={{color:'blue', fontFamily:'cursive'}}><h1 >Records List</h1>
-    <h3><a href= {`/addRecord`}>Add a new Record</a></h3>
-    <ul style={{listStyleType:'repeating-emoji'}}>
-    {List.map((List, i)=>{
-      return(
-        <li key={i} >
-          <h2><a href = {`/${List._id}`}>{List.artist}</a></h2>
-          <h3>{List.title}</h3>
-        </li>
-      )
-    })}
-    </ul>
+    <div id='container'>
+      <h1 style={{color:'blue', fontFamily:'cursive'}} >Records List</h1>
+      <h3><a href= {`/addRecord`}>Add a new Record</a></h3>
+        <div id='records'>
+          {List.map((List, i)=>{
+            return(
+              <div id='record' key={i} >
+                <h2><a href = {`/${List._id}`}>{List.artist}</a></h2>
+                <img style={{height:'200px', width:'200px'}} src={List.cover}/>
+              </div>
+            )
+          })}
+        </div>
     </div>
-
-    </>
    
 
   )
