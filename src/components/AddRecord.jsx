@@ -11,7 +11,8 @@ function AddRecord() {
                     title: event.target.title.value,
                     cover: event.target.cover.value,
                     year: event.target.year.value,
-                    genre: event.target.genre.value
+                    genre: event.target.genre.value,
+                    sound: event.target.sound.value
                 }
         createRecord(add)
         nav('/')
@@ -27,6 +28,7 @@ function AddRecord() {
         Cover Art: <input type='text' name='cover'/><br/>
         Year: <input type='number' name='year'/><br/>
         Genre: <input type='text' name='genre'/><br/>
+        Sound: <input type='text' name='sound'/><br/>
         <input type='submit' value='Add Record'/>
     </form>
 </div>

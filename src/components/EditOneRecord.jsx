@@ -18,7 +18,8 @@ const editOne = (event)=> {
             title: event.target.title.value,
             cover: event.target.cover.value,
             year: event.target.year.value,
-            genre: event.target.genre.value
+            genre: event.target.genre.value,
+            sound: event.target.sound.value
         }
         editRecord(id, edited)
         navigate(`/${id}`)
@@ -33,6 +34,7 @@ const editOne = (event)=> {
         Cover Art: <input type='text' name='cover' defaultValue={data.cover}/><br/>
         Year: <input type='number' name='year' defaultValue={data.year}/><br/>
         Genre: <input type='text' name='genre' defaultValue={data.genre}/><br/>
+        Sound: <input type='text' name='sound' defaultValue={data.sound}/><br/>
         <input type='submit' value='Edit Record'/>
     </form>
     </div>
